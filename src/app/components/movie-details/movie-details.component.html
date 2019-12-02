@@ -1,0 +1,22 @@
+<div *ngIf="movie" class="box2">
+    <div>
+        <label>Movie Title:</label>{{movie.title}}
+    </div>
+    <div>
+        <label>Release Year:</label>{{movie.year}}
+    </div>
+
+    <div>
+        <label>Availability :</label>{{movie.available}}
+    </div>
+
+    <span class="button is-small btn-primary" *ngIf='movie.available' (click)='updateAvailable(false)'>Unavailable</span>
+ 
+    <span class="button is-small btn-primary" *ngIf='!movie.available' (click)='updateAvailable  (true)'>Available</span>
+   
+    <span class="button is-small btn-danger" (click)='deleteMovie()'>Delete</span>
+   
+    <hr/>
+    
+
+</div>

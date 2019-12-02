@@ -1,0 +1,7 @@
+<h3 class="lead">List Of Movies Available</h3>
+<div *ngFor="let movie of movies" style="width: 300px;">
+<app-movie-details [movie]='movie'></app-movie-details>
+</div>
+<div class="margin-top:20px;">
+    <button type="button" class="button btn-danger" (click)='deleteMovies()'>Delete All Movies</button>
+</div>
